@@ -1,4 +1,4 @@
-baseURL = "https://loweniyan.github.io/myMathNotesWebsite/"
+baseURL = "https://math.nyan.work/"
 languageCode = "zh-cn"
 title = "LoweNiyan的数学笔记"
 theme = "hugo-coder"
