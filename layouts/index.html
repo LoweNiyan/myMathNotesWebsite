@@ -1,16 +1,19 @@
 {{ define "content" }}
   {{ $readmePage := .Site.GetPage "notes/README.md" }}
   {{ if $readmePage }}
-    <article class="post">
-      <header>
-        <div class="title">
-          <h1>{{ $readmePage.Title }}</h1>
+    <section class="container post">
+      <article>
+        <header>
+          <div class="post-header">
+            <h1 class="post-title">{{ $readmePage.Title }}</h1>
+          </div>
+        </header>
+
+        <div class="post-content">
+          {{ $readmePage.Content }}
         </div>
-      </header>
-      <div class="post-content">
-        {{ $readmePage.Content }}
-      </div>
-    </article>
+      </article>
+    </section>
   {{ else }}
     <p style="color: red;"><b>Homepage Error:</b> README.md file not found at path "notes/README.md".</p>
   {{ end }}
