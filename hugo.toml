@@ -18,6 +18,7 @@ theme = "hugo-coder"
   description = "LoweNiyan的数学笔记"
   keywords = "blog,developer,personal,math,notes"
   info = ["高等数学笔记", "Powered by Hugo & Obsidian"]
+  defaultTheme = "auto"
   avatarurl = "https://avatars.githubusercontent.com/u/106739233"
 
   # PWA settings
