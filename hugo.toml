@@ -1,3 +1,34 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://loweniyan.github.io/myMathNotesWebsite/"
+languageCode = "zh-cn"
+title = "LoweNiyan的数学笔记"
+theme = "hugo-coder"
+
+[pagination]
+  pagerSize = 20
+
+# --- Global Frontmatter Defaults ---
+[frontmatter]
+  title = ":filename" # Use the filename as the title
+  date = ["上课日期", ":default"] # Use '上课日期' for the date
+  draft = false # Mark all content as not a draft
+
+# --- Theme Parameters ---
+[params]
+  author = "LoweNiyan"
+  description = "LoweNiyan的数学笔记"
+  keywords = "blog,developer,personal,math,notes"
+  info = ["高等数学笔记", "Powered by Hugo & Obsidian"]
+  avatarurl = "https://avatars.githubusercontent.com/u/106739233"
+
+  # PWA settings
+  enablePWA = true
+
+  # Math settings
+  math = true # KaTeX
+
+# --- Main Menu ---
+[menu]
+  [[menu.main]]
+    name = "笔记"
+    weight = 1
+    url  = "/notes/"

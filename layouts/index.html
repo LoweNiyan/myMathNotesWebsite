@@ -1,0 +1,17 @@
+{{ define "main" }}
+  {{ $readmePage := .Site.GetPage "page" "notes/README.md" }}
+  {{ if $readmePage }}
+    <article class="post">
+      <header>
+        <div class="title">
+          <h1>{{ $readmePage.Title }}</h1>
+        </div>
+      </header>
+      <div class="post-content">
+        {{ $readmePage.Content }}
+      </div>
+    </article>
+  {{ else }}
+    <p>README page not found.</p>
+  {{ end }}
+{{ end }}
