@@ -1,20 +1,17 @@
-{{ define "main" }}
-  <div class="post-content">
-    <h1>Homepage Debug</h1>
-    <p>Trying to find the README page...</p>
-    
-    <hr>
-
-    {{ $readmePage := .Site.GetPage "notes/README.md" }}
-    <p><b>Attempting to get page at "notes/README.md"...</b></p>
-    {{ if $readmePage }}
-      <p style="color: green;"><b>SUCCESS:</b> Page found! Title is: "{{ $readmePage.Title }}"</p>
-      <p>Rendering content below:</p>
-      <hr>
-      {{ $readmePage.Content }}
-    {{ else }}
-      <p style="color: red;"><b>FAILURE:</b> Page not found at "notes/README.md".</p>
-      <p>This is likely the reason the homepage is empty. The path might be incorrect or the page might not be considered a "regular" page by Hugo.</p>
-    {{ end }}
-  </div>
+{{ define "content" }}
+  {{ $readmePage := .Site.GetPage "notes/README.md" }}
+  {{ if $readmePage }}
+    <article class="post">
+      <header>
+        <div class="title">
+          <h1>{{ $readmePage.Title }}</h1>
+        </div>
+      </header>
+      <div class="post-content">
+        {{ $readmePage.Content }}
+      </div>
+    </article>
+  {{ else }}
+    <p style="color: red;"><b>Homepage Error:</b> README.md file not found at path "notes/README.md".</p>
+  {{ end }}
 {{ end }}
