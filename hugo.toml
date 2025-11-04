@@ -10,7 +10,7 @@ theme = "hugo-coder"
 [frontmatter]
   title = ":filename" # Use the filename as the title
   date = ["上课日期", ":default"] # Use '上课日期' for the date
-  
+  draft = false # Mark all content as not a draft
 
 # --- Theme Parameters ---
 [params]
@@ -26,8 +26,6 @@ theme = "hugo-coder"
 
   # Math settings
   math = true # KaTeX
-
-  colorScheme = "auto"
 
 # --- Main Menu ---
 [menu]
