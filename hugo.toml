@@ -1,7 +1,14 @@
 baseURL = "https://math.nyan.work/"
 languageCode = "zh-cn"
 title = "LoweNiyan的数学笔记"
-theme = "hugo-coder"
+theme = "FixIt"
+defaultContentLanguage = "zh-cn" # Set based on user's languageCode
+languageName = "简体中文" # Set based on user's languageCode
+hasCJKLanguage = true # Set based on user's languageCode
+copyright = "LoweNiyan" # Placeholder, user can change
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
 
 [pagination]
   pagerSize = 20
@@ -15,7 +22,7 @@ theme = "hugo-coder"
 [params]
   author = "LoweNiyan"
   description = "LoweNiyan的数学笔记"
-  keywords = "blog,developer,personal,math,notes"
+  keywords = ["blog","developer","personal","math","notes"] # Changed to array for FixIt
   info = ["高等数学笔记", "Powered by Hugo & Obsidian"]
   defaultTheme = "auto"
   avatarurl = "https://avatars.githubusercontent.com/u/106739233"
@@ -28,9 +35,762 @@ theme = "hugo-coder"
 
   colorScheme = "auto"
 
-# --- Main Menu ---
-[menu]
-  [[menu.main]]
-    name = "笔记"
-    weight = 1
-    url  = "/notes/"
+  # FixIt specific params
+  version = "0.3.X"
+  fingerprint = ""
+  dateFormat = "2006-01-02"
+  images = []
+  externalIcon = false
+  capitalizeTitles = true
+  withSiteTitle = true
+  titleDelimiter = "-"
+  indexWithSubtitle = false
+  summaryPlainify = false
+  enableTranslationMerge = false
+  disableThemeInject = false
+
+  [params.author]
+    name = "LoweNiyan"
+    email = ""
+    link = ""
+    avatar = "https://avatars.githubusercontent.com/u/106739233" # Using user's avatarurl
+
+  [params.app]
+    title = "LoweNiyan的数学笔记" # Using user's title
+    noFavicon = false
+    svgFavicon = ""
+    iconColor = "#5bbad5"
+    tileColor = "#da532c"
+    [params.app.themeColor]
+      light = "#f8f8f8"
+      dark = "#252627"
+
+  [params.search]
+    enable = false # Disable by default, user can enable later
+    type = "fuse"
+    contentLength = 4000
+    placeholder = ""
+    maxResultLength = 10
+    snippetLength = 30
+    highlightTag = "em"
+    absoluteURL = false
+
+  [params.header]
+    desktopMode = "sticky"
+    mobileMode = "auto"
+    [params.header.title]
+      logo = ""
+      name = "LoweNiyan的数学笔记"
+      pre = ""
+      post = ""
+      typeit = false
+    [params.header.subtitle]
+      name = ""
+      typeit = false
+
+  [params.breadcrumb]
+    enable = false
+    sticky = false
+    showHome = false
+    separator = "/"
+    capitalize = true
+
+  [params.navigation]
+    inSection = false
+    reverse = false
+
+  [params.footer]
+    enable = true
+    copyright = true
+    author = true
+    since = "2023" # Placeholder, user can change
+    gov = ""
+    icp = ""
+    license = ""
+    [params.footer.powered]
+      enable = true
+      hugoLogo = true
+      themeLogo = true
+    [params.footer.siteTime]
+      enable = false
+      animate = true
+      icon = "fa-solid fa-heartbeat"
+      pre = ""
+      value = ""
+    [params.footer.order]
+      powered = 0
+      copyright = 0
+      statistics = 0
+      visitor = 0
+      beian = 0
+
+  [params.archives]
+    paginate = 20
+    dateFormat = "01-02"
+
+  [params.section]
+    paginate = 20
+    dateFormat = "01-02"
+    [params.section.feed]
+      limit = -1
+      fullText = false
+
+  [params.list]
+    paginate = 20
+    dateFormat = "01-02"
+    [params.list.feed]
+      limit = -1
+      fullText = false
+
+  [params.recentlyUpdated]
+    archives = true
+    section = true
+    list = true
+    days = 30
+    maxCount = 10
+
+  [params.tagcloud]
+    enable = false
+    min = 14
+    max = 32
+    peakCount = 10
+    orderby = "name"
+
+  [params.home]
+    [params.home.profile]
+      enable = false
+      gravatarEmail = ""
+      avatarURL = "https://avatars.githubusercontent.com/u/106739233"
+      avatarMenu = ""
+      title = "LoweNiyan的数学笔记"
+      subtitle = ""
+      typeit = true
+      social = true
+      disclaimer = ""
+    [params.home.posts]
+      enable = true
+      paginate = 6
+
+  [params.social]
+    RSS = true # Keep RSS enabled if user had it
+
+  [params.typeit]
+    speed = 100
+    cursorSpeed = 1000
+    cursorChar = "|"
+    duration = -1
+    loop = false
+
+  [params.mermaid]
+    cdn = ""
+    zenuml = ""
+    themes = ["default", "dark"]
+    securityLevel = "loose"
+    look = "handDrawn"
+    fontFamily = ""
+    layoutLoaders = []
+    layout = "dagre"
+
+  [params.admonition]
+
+  [params.taskList]
+
+  [params.repoVersion]
+    url = "https://github.com/hugo-fixit/FixIt/releases/tag/v"
+    name = "FixIt"
+
+  [params.pangu]
+    enable = false
+    selector = "article"
+
+  [params.watermark]
+    enable = false
+    content = ""
+    opacity = 0.1
+    width = 150
+    height = 20
+    rowSpacing = 60
+    colSpacing = 30
+    rotate = 15
+    fontSize = 0.85
+    fontFamily = "inherit"
+
+  [params.busuanzi]
+    enable = false
+    source = "https://vercount.one/js"
+    siteViews = true
+    pageViews = true
+
+  [params.verification]
+    google = ""
+    bing = ""
+    yandex = ""
+    pinterest = ""
+    baidu = ""
+    so = ""
+    sogou = ""
+
+  [params.seo]
+    image = ""
+    thumbnailUrl = ""
+
+  [params.analytics]
+    enable = false
+    [params.analytics.google]
+      id = ""
+      anonymizeIP = true
+    [params.analytics.fathom]
+      id = ""
+      server = ""
+    [params.analytics.baidu]
+      id = ""
+    [params.analytics.umami]
+      data_website_id = ""
+      src = ""
+      data_host_url = ""
+      data_domains = ""
+    [params.analytics.plausible]
+      data_domain = ""
+      src = ""
+    [params.analytics.cloudflare]
+      token = ""
+    [params.analytics.splitbee]
+      enable = false
+      no_cookie = true
+      do_not_track = true
+      data_token = ""
+
+  [params.cookieconsent]
+    enable = true
+    [params.cookieconsent.content]
+      message = ""
+      dismiss = ""
+      link = ""
+
+  [params.cdn]
+    data = ""
+
+  [params.compatibility]
+    polyfill = false
+    objectFit = false
+
+  [params.githubCorner]
+    enable = false
+    permalink = "https://github.com/hugo-fixit/FixIt"
+    title = "View source on GitHub"
+    position = "right"
+
+  [params.gravatar]
+    enable = false
+    host = "www.gravatar.com"
+    style = ""
+
+  [params.backToTop]
+    enable = true
+    scrollpercent = false
+
+  [params.readingProgress]
+    enable = false
+    start = "left"
+    position = "top"
+    reversed = false
+    light = ""
+    dark = ""
+    height = "2px"
+
+  [params.pace]
+    enable = false
+    color = "blue"
+    theme = "minimal"
+
+  [params.postChat]
+    enable = false
+    key = ""
+    userMode = "iframe"
+    addButton = true
+    defaultInput = false
+    left = ""
+    bottom = ""
+    width = ""
+    height = ""
+    fill = ""
+    backgroundColor = ""
+    upLoadWeb = true
+    showInviteLink = true
+    userTitle = ""
+    userDesc = ""
+    blackDom = []
+    frameWidth = ""
+    frameHeight = ""
+    userIcon = ""
+    defaultChatQuestions = []
+    defaultSearchQuestions = []
+    hotWords = true
+
+  [params.postSummary]
+    enable = false
+    key = ""
+    title = ""
+    theme = ""
+    postURL = ""
+    blacklist = ""
+    wordLimit = 1000
+    typingAnimate = true
+    beginningText = ""
+    loadingText = true
+
+  [params.feed]
+    limit = 10
+    fullText = true
+    [params.feed.follow]
+      feedId = ""
+      userId = ""
+
+  [params.image]
+    cacheRemote = false
+    optimise = false
+
+  [params.jsonViewer]
+    enable = true
+    expandDepth = 1
+    copyable = true
+    sort = false
+    boxed = true
+
+  [params.customPartials]
+    head = []
+    menuDesktop = []
+    menuMobile = []
+    profile = []
+    aside = []
+    comment = []
+    footer = []
+    widgets = []
+    assets = []
+    postTocBefore = []
+    postTocAfter = []
+    postContentBefore = []
+    postContentAfter = []
+    postFooterBefore = []
+    postFooterAfter = []
+
+  [params.dev]
+    enable = false
+    c4u = false
+
+  [params.page]
+    authorAvatar = true
+    hiddenFromHomePage = false
+    hiddenFromSearch = false
+    hiddenFromRelated = false
+    hiddenFromFeed = false
+    twemoji = false
+    lightgallery = false
+    ruby = true
+    fraction = true
+    fontawesome = true
+    license = "<a rel=\"license external nofollow noopener noreferrer\" href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\">CC BY-NC-SA 4.0</a>"
+    linkToMarkdown = true
+    linkToSource = true
+    linkToEdit = true
+    linkToReport = true
+    linkToVscode = true
+    pageStyle = "normal"
+    autoBookmark = false
+    wordCount = true
+    readingTime = true
+    endFlag = ""
+    instantPage = false
+    collectionList = false
+    collectionNavigation = false
+
+    [params.page.repost]
+      enable = false
+      url = ""
+
+    [params.page.toc]
+      enable = true
+      keepStatic = false
+      auto = true
+      position = "right"
+      ordered = false
+      startLevel = 2
+      endLevel = 6
+      decreaseH1 = false
+
+    [params.page.expirationReminder]
+      enable = false
+      reminder = 90
+      warning = 180
+      closeComment = false
+
+    [params.page.heading]
+      capitalize = false
+      [params.page.heading.number]
+        enable = false
+        onlyMainSection = true
+        [params.page.heading.number.format]
+          h1 = "{title}"
+          h2 = "{h2} {title}"
+          h3 = "{h2}.{h3} {title}"
+          h4 = "{h2}.{h3}.{h4} {title}"
+          h5 = "{h2}.{h3}.{h4}.{h5} {title}"
+          h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
+
+    [params.page.math]
+      enable = true
+      type = "katex"
+      [params.page.math.katex]
+        copyTex = true
+        throwOnError = false
+        errorColor = "#ff4949"
+        macros = {}
+      [params.page.math.mathjax]
+        cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        packages = {}
+        macros = {}
+        [params.page.math.mathjax.loader]
+          load = [ "ui/safe" ]
+          paths = {}
+        [params.page.math.mathjax.options]
+          enableMenu = true
+          skipHtmlTags = [
+            "script",
+            "noscript",
+            "style",
+            "textarea",
+            "pre",
+            "code",
+            "math",
+            "select",
+            "option",
+            "mjx-container"
+          ]
+          ignoreHtmlClass = "mathjax_ignore"
+          [params.page.math.mathjax.options.includeHtmlTags]
+
+    [params.page.code]
+      enable = true
+      copy = true
+      edit = true
+      maxShownLines = 10
+
+    [params.page.mapbox]
+      accessToken = ""
+      lightStyle = "mapbox://styles/mapbox/light-v11"
+      darkStyle = "mapbox://styles/mapbox/dark-v11"
+      navigation = true
+      geolocate = true
+      scale = true
+      fullscreen = true
+
+    [params.page.related]
+      enable = false
+      count = 5
+      position = ["aside", "footer"]
+
+    [params.page.reward]
+      enable = false
+      animation = false
+      position = "after"
+      mode = "static"
+      ways = {}
+
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = false
+      Whatsapp = false
+      Pinterest = false
+      Tumblr = false
+      HackerNews = false
+      Reddit = false
+      VK = false
+      Buffer = false
+      Xing = false
+      Line = false
+      Instapaper = false
+      Pocket = false
+      Flipboard = false
+      Weibo = true
+      Myspace = false
+      Blogger = false
+      Baidu = false
+      Odnoklassniki = false
+      Evernote = false
+      Skype = false
+      Trello = false
+      Mix = false
+
+    [params.page.comment]
+      enable = false
+      [params.page.comment.artalk]
+        enable = false
+        server = "https://yourdomain"
+        site = "默认站点"
+        useBackendConf = false
+        placeholder = ""
+        noComment = ""
+        sendBtn = ""
+        editorTravel = true
+        flatMode = "auto"
+        lightgallery = false
+        locale = ""
+        emoticons = ""
+        nestMax = 2
+        nestSort = "DATE_ASC"
+        vote = true
+        voteDown = false
+        uaBadge = true
+        listSort = true
+        imgUpload = true
+        preview = true
+        versionCheck = true
+      [params.page.comment.disqus]
+        enable = false
+        shortname = ""
+      [params.page.comment.gitalk]
+        enable = false
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
+      [params.page.comment.valine]
+        enable = false
+        appId = ""
+        appKey = ""
+        placeholder = ""
+        avatar = "mp"
+        meta = ["nick", "mail", "link"]
+        requiredFields = []
+        pageSize = 10
+        lang = ""
+        visitor = true
+        recordIP = true
+        highlight = true
+        enableQQ = false
+        serverURLs = ""
+        emoji = ""
+        commentCount = true
+      [params.page.comment.waline]
+        enable = false
+        serverURL = ""
+        pageview = false
+        emoji = [ "//unpkg.com/@waline/emojis@1.1.0/weibo" ]
+        meta = ["nick", "mail", "link"]
+        requiredMeta = []
+        login = "enable"
+        wordLimit = 0
+        pageSize = 10
+        imageUploader = false
+        highlighter = false
+        comment = false
+        texRenderer = false
+        search = false
+        recaptchaV3Key = ""
+        turnstileKey = ""
+        reaction = false
+      [params.page.comment.facebook]
+        enable = false
+        width = "100%"
+        numPosts = 10
+        appId = ""
+        languageCode = ""
+      [params.page.comment.telegram]
+        enable = false
+        siteID = ""
+        limit = 5
+        height = ""
+        color = ""
+        colorful = true
+        dislikes = false
+        outlined = false
+      [params.page.comment.commento]
+        enable = false
+      [params.page.comment.utterances]
+        enable = false
+        repo = ""
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+      [params.page.comment.twikoo]
+        enable = false
+        envId = ""
+        region = ""
+        path = ""
+        visitor = true
+        commentCount = true
+        lightgallery = false
+        katex = false
+      [params.page.comment.giscus]
+        enable = false
+        repo = ""
+        repoId = ""
+        category = ""
+        categoryId = ""
+        mapping = ""
+        origin = "https://giscus.app"
+        strict = "0"
+        term = ""
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom"
+        lang = ""
+        lightTheme = "light"
+        darkTheme = "dark"
+        lazyLoad = true
+
+    [params.page.library]
+      [params.page.library.css]
+      [params.page.library.js]
+
+    [params.page.seo]
+      images = []
+
+      [params.page.seo.publisher]
+        name = ""
+        logoUrl = ""
+
+# Markup related configuration in Hugo
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    guessSyntax = true
+
+  [markup.goldmark]
+    duplicateResourceFiles = false
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      linkifyProtocol = 'https'
+      strikethrough = false
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.extensions.extras]
+      [markup.goldmark.extensions.extras.delete]
+        enable = true
+      [markup.goldmark.extensions.extras.insert]
+        enable = true
+      [markup.goldmark.extensions.extras.mark]
+        enable = true
+      [markup.goldmark.extensions.extras.subscript]
+        enable = true
+      [markup.goldmark.extensions.extras.superscript]
+        enable = true
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [
+          ['\[','\]'],
+          ['$$','$$']
+        ]
+        inline = [
+          ['\[','\]'],
+          ['$','$']
+        ]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false
+
+# Sitemap Configuration
+[sitemap]
+  changefreq = "weekly"
+  disable = false
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Permalinks Configuration
+[permalinks]
+  [permalinks.page]
+  [permalinks.section]
+  [permalinks.taxonomy]
+  [permalinks.term]
+
+# Privacy Configuration
+[privacy]
+  [privacy.x]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# Media Types
+[mediaTypes]
+
+# Output Format Definitions
+[outputFormats]
+  [outputFormats.archives]
+    path = "archives"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
+    notAlternative = true
+  [outputFormats.offline]
+    path = "offline"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
+    notAlternative = true
+  [outputFormats.readme]
+    baseName = "readme"
+    mediaType = "text/markdown"
+    isPlainText = true
+    isHTML = false
+    notAlternative = true
+  [outputFormats.baidu_urls]
+    baseName = "baidu_urls"
+    mediaType = "text/plain"
+    isPlainText = true
+    isHTML = false
+    notAlternative = true
+  [outputFormats.search]
+    baseName = "search"
+    mediaType = "application/json"
+    rel = "search"
+    isPlainText = true
+    isHTML = false
+    permalinkable = true
+
+# Customizing Output Formats
+[outputs]
+  home = [
+    "html",
+    "rss",
+    "archives",
+    "offline",
+    "search"
+  ]
+  page = [
+    "html",
+    "markdown"
+  ]
+  section = [
+    "html",
+    "rss"
+  ]
+  taxonomy = [ "html" ]
+  term = [
+    "html",
+    "rss"
+  ]
+
+# Taxonomies Configuration
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  collection = "collections"
