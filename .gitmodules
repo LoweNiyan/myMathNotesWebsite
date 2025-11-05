@@ -1,3 +1,6 @@
 [submodule "content/notes"]
 	path = content/notes
 	url = https://github.com/LoweNiyan/myMathNotes.git
+[submodule "themes/FixIt"]
+	path = themes/FixIt
+	url = https://github.com/hugo-fixit/FixIt.git
