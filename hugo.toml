@@ -20,7 +20,7 @@ enableEmoji = true
 
 # --- Theme Parameters ---
 [params]
-  author = "LoweNiyan"
+
   description = "LoweNiyan的数学笔记"
   keywords = ["blog","developer","personal","math","notes"] # Changed to array for FixIt
   info = ["高等数学笔记", "Powered by Hugo & Obsidian"]
