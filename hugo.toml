@@ -13,6 +13,9 @@ enableEmoji = true
 [pagination]
   pagerSize = 20
 
+[permalinks]
+    notes = '/:slug/'
+
 # --- Global Frontmatter Defaults ---
 [frontmatter]
   title = ":filename" # Use the filename as the title
@@ -711,12 +714,6 @@ enableEmoji = true
   filename = "sitemap.xml"
   priority = 0.5
 
-# Permalinks Configuration
-[permalinks]
-  [permalinks.page]
-  [permalinks.section]
-  [permalinks.taxonomy]
-  [permalinks.term]
 
 # Privacy Configuration
 [privacy]
