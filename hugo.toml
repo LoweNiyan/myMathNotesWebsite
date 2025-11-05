@@ -524,7 +524,7 @@ enableEmoji = true
       Mix = false
 
     [params.page.comment]
-      enable = false
+      enable = true
       [params.page.comment.artalk]
         enable = false
         server = "https://yourdomain"
@@ -609,8 +609,8 @@ enableEmoji = true
       [params.page.comment.commento]
         enable = false
       [params.page.comment.utterances]
-        enable = false
-        repo = ""
+        enable = true
+        repo = "LoweNiyan/myMathNotes"
         issueTerm = "pathname"
         label = ""
         lightTheme = "github-light"
